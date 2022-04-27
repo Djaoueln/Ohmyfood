@@ -5,12 +5,26 @@
 body 
     {
         margin: 0px;
-        font-family: 'Roboto', sans-serif;;
+        font-family: 'Roboto', sans-serif;
     }
 header
    {
       background-color: white;
        text-align: center;
-       padding: 3rem;
+       padding: 2rem;
        box-shadow: 0px 3px 3px 0px grey;
+       position: relative;
+   }
+main .search-city
+   {
+     background-color: #f3f3f3;
+     padding: 0.3rem;
+     font-size: small;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+.fa-solid
+   {
+     padding: 2rem ;  
    }
