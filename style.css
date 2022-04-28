@@ -28,3 +28,28 @@ main .search-city
    {
      padding: 2rem ;  
    }
+main .research 
+   {
+      text-align: center;
+      background-color: #f0eaea;
+      padding-top: 1rem;
+   }
+.grad
+   {   
+      background: rgb(147,86,220);;
+      background-image: linear-gradient(0deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+      padding: 1rem;
+      border-radius: 1.5rem;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      transition: all, 200ms ;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      box-shadow: 0px 1px 1px 1px GREY;
+   }
+button:hover
+   {
+      transform: scale(1.05);
+      opacity: 0.8;
+   }
