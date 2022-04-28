@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 3 oc",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Djaoueln/Ohmyfood.git"
+  },
+  "author": "Djaouel NAHLA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Djaoueln/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Djaoueln/Ohmyfood#readme"
+}
