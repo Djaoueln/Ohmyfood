@@ -5,6 +5,7 @@
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 
 /* HEADER */
@@ -14,6 +15,9 @@ header {
   padding: 2rem;
   box-shadow: 0px 3px 3px 0px grey;
   position: relative;
+}
+header .logo img {
+  height: 2rem;
 }
 
 .search-city {
@@ -66,18 +70,15 @@ button:hover {
   border-radius: 2rem;
   background-color: #f6f6f6;
   margin-left: 10px;
-  padding: 0.5rem;
   align-items: center;
 }
-
 .block i {
   display: flex;
   align-items: center;
   padding: 1rem;
   text-align: center;
 }
-
-.number {
+.block .number {
   display: flex;
   border-radius: 50%;
   background-color: rgb(147, 86, 220);
@@ -88,6 +89,79 @@ button:hover {
   place-items: center;
   justify-content: center;
   left: 2px;
+}
+
+.block:hover {
+  transform: scale(1.5);
+  opacity: 0.8;
+}
+
+/* Result*/
+.menu {
+  background-color: #f6f6f6;
+  padding: 32px 16px;
+}
+
+.restaurant-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-around;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+.card-menu {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+  transition: all 0.2s;
+  flex-basis: 30%;
+  position: relative;
+  text-decoration: none;
+  align-content: center;
+}
+.card-menu img {
+  height: 12rem;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+.card-menu .new {
+  position: absolute;
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  top: 1rem;
+  right: 0.75rem;
+}
+.card-menu .description {
+  margin-left: 16px;
+  color: black;
+  display: flex;
+  position: relative;
+}
+.card-menu .description .icone {
+  font-size: 32px;
+  position: absolute;
+  right: 16px;
+  bottom: 18%;
+  transform: translateY(-50%);
+}
+.card-menu .description .icone .fa-regular {
+  width: 100%;
+  bottom: 40%;
+}
+.card-menu .description .icone .fa-solid {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220) 16%, rgb(255, 121, 218) 100%);
+  transition: all 200ms;
+}
+.card-menu .description .icone:hover .fa-solid {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

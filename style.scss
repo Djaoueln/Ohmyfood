@@ -1,85 +1,89 @@
 @import "./sass/base.scss";
 @import "./sass/layout/header.scss";
+@import "./sass/layout/Search.scss";
 
-
-
-.search-city
-   {
-     background-color: #f3f3f3;
-     padding: 0.3rem;
-     font-size: small;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     i{
-      padding: 1.5rem ;
-      font-size:medium;  
-    }
-   }
-
+/* Result*/
+.menu
+{
+   background-color: #f6f6f6;
+   padding: 32px 16px;
   
-/* RESEARCH */
+}
+.restaurant-card
+ {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 16px;
+   justify-content: space-around;
+   margin-bottom: 16px;
+   flex-direction: column;
+   
+ }
+.card-menu
+{
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 0 16px #0000002e;
+    transition: all 0.2s;
+    flex-basis: 30%;
+    position: relative;
+    text-decoration: none;
+    align-content: center;
 
-main .research 
-   {
-      text-align: center;
-      background-color: #f0eaea;
-      padding-top: 1rem;
-   }
-.grad
-   {   
-      background: rgb(147,86,220);;
-      background-image: linear-gradient(0deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
-      padding: 1rem;
-      border-radius: 1.5rem;
-      border: none;
-      color: white;
-      font-size: 1rem;
-      transition: all, 200ms ;
-      margin-bottom: 2rem;
-      margin-top: 1rem;
-      box-shadow: 0px 1px 1px 1px GREY;
-   }
-button:hover
-   {
-      transform: scale(1.05);
-      opacity: 0.8;
-   }
-/* WORKING */
-.working
-   {
-      padding: 0rem 1rem 1rem 1rem
-   }
-.block
-  {
-     display: flex;
-     margin-bottom: 1rem;
-     border-radius: 2rem;
-     background-color: #f6f6f6;
-     margin-left: 10px;
-     padding: 0.5rem;
-     align-items: center;
+     img
+     {
+       height: 12rem;
+       object-fit: cover;
+       width: 100%;
+       border-radius: 16px 16px 0 0;
+     }
+     .new
+      {
+         position: absolute;
+         background-color: #99e2d0;
+         color: #1b6150;
+         padding: 0.5rem;
+         border-radius: 0.125rem;
+         top: 1rem;
+        right: 0.75rem;
+      }
+      .description 
+      {
+         margin-left: 16px;
+         color: black;
+         display: flex;
+         position: relative;
 
+         
+         .icone 
+         {
+           font-size: 32px;
+           position: absolute;
+           right: 16px;
+           bottom: 18%;
+           transform: translateY(-50%);
+         
+           .fa-regular
+           {
+              width: 100%;
+              bottom: 40%;
 
+           }
+           .fa-solid
+           {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(0deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+             transition: all 200ms ;
+             
+         }
+           &:hover .fa-solid{
+           opacity: 0;
+           }
+         }
+      }
    }
-.block i
-   {
-      display: flex;
-      align-items: center; 
-      padding: 1rem;
-      text-align: center;
-   }
-.number
-   {
-      display: flex;
-      border-radius: 50%;
-      background-color: rgb(147,86,220);
-      color: white;
-      width: 2rem;
-      height: 2rem;
-      position:absolute;
-      place-items: center;
-      justify-content: center;
-      left: 2px;
 
-   }
+     
+
