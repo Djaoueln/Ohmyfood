@@ -8,6 +8,15 @@ body {
   width: 100%;
 }
 
+.main {
+  padding: 0 7rem;
+}
+@media (max-width: 1000px) {
+  .main {
+    padding: 0 1rem;
+  }
+}
+
 /* HEADER */
 header {
   background-color: white;
@@ -21,7 +30,7 @@ header .logo img {
 }
 
 .search-city {
-  background-color: #f3f3f3;
+  background-color: lightgray;
   padding: 0.3rem;
   font-size: small;
   display: flex;
@@ -36,7 +45,7 @@ header .logo img {
 /* RESEARCH */
 main .research {
   text-align: center;
-  background-color: #f0eaea;
+  background-color: #f3f3f3;
   padding-top: 1rem;
 }
 
@@ -62,21 +71,27 @@ button:hover {
 /* WORKING */
 .working {
   padding: 0rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.working .block-card {
+  align-self: center;
 }
 
 .block {
+  background-color: #F5F5F5;
+  border-radius: 20px;
   display: flex;
-  margin-bottom: 1rem;
-  border-radius: 2rem;
-  background-color: #f6f6f6;
-  margin-left: 10px;
+  flex-direction: row;
   align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s;
+  margin-bottom: 2rem;
 }
-.block i {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  text-align: center;
+.block .ic {
+  width: 32px;
+  color: grey;
 }
 .block .number {
   display: flex;
@@ -85,15 +100,63 @@ button:hover {
   color: white;
   width: 2rem;
   height: 2rem;
-  position: absolute;
+  position: relative;
   place-items: center;
   justify-content: center;
-  left: 2px;
+  margin-left: -100px;
+  padding: 0rem 0.8rem;
 }
 
 .block:hover {
   transform: scale(1.5);
   opacity: 0.8;
+}
+
+main {
+  position: relative;
+  margin-top: -99px;
+  border-radius: 16px 16px 0 0;
+  background-color: #f6f6f6;
+}
+
+.pic img {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.menu1 {
+  border-radius: 16px 16px 0 0;
+}
+.menu1 h2 {
+  font-family: "Shrikhand", "sans-serif";
+  width: 100%;
+  padding: 16px 16px 0 0;
+}
+.menu1 .icone i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 80%;
+  transform: translateY(-50%);
+}
+.menu1 .icone .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220) 16%, rgb(255, 121, 218) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 0.3s linear 0s;
+}
+.menu1 .icone:hover .fa-solid {
+  opacity: 1;
+}
+
+/*corp */
+.cardmenu {
+  background-color: yellow;
 }
 
 /* Result*/
@@ -141,27 +204,45 @@ button:hover {
   color: black;
   display: flex;
   position: relative;
+  justify-content: space-between;
+  align-items: center;
 }
-.card-menu .description .icone {
-  font-size: 32px;
+.card-menu .description i {
+  font-size: 2rem;
   position: absolute;
-  right: 16px;
-  bottom: 18%;
+  right: 1rem;
+  top: 50%;
   transform: translateY(-50%);
 }
-.card-menu .description .icone .fa-regular {
-  width: 100%;
-  bottom: 40%;
-}
-.card-menu .description .icone .fa-solid {
-  background-clip: text;
-  -webkit-background-clip: text;
+.card-menu .description .fa-solid {
   color: transparent;
   background-image: linear-gradient(0deg, rgb(147, 86, 220) 16%, rgb(255, 121, 218) 100%);
-  transition: all 200ms;
-}
-.card-menu .description .icone:hover .fa-solid {
+  background-clip: text;
+  -webkit-background-clip: text;
   opacity: 0;
+  transition: all 0.3s linear 0.2s;
+}
+.card-menu .description:hover .fa-solid {
+  opacity: 1;
+}
+
+/* footer */
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+}
+footer .logo-footer img {
+  height: 1.2rem;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+footer p {
+  color: white;
+  font-size: smaller;
+}
+footer p i {
+  font-size: 0.5rem;
+  padding: 0.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

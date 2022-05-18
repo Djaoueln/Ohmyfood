@@ -1,6 +1,6 @@
 .search-city
    {
-     background-color: #f3f3f3;
+     background-color: lightgray;
      padding: 0.3rem;
      font-size: small;
      display: flex;
@@ -18,7 +18,7 @@
 main .research 
    {
       text-align: center;
-      background-color: #f0eaea;
+      background-color: #f3f3f3;
       padding-top: 1rem;
    }
 .grad
@@ -43,22 +43,32 @@ button:hover
 /* WORKING */
 .working
    {
-      padding: 0rem 1rem 1rem 1rem
+      padding: 0rem 1rem 1rem 1rem;
+
+       display: flex;
+       flex-direction: column;
+      .block-card
+        {
+         align-self: center;
+        }
    }
+
 .block
   {
-     display: flex;
-     margin-bottom: 1rem;
-     border-radius: 2rem;
-     background-color: #f6f6f6;
-     margin-left: 10px;
-     align-items: center;
-     i
+   background-color: #F5F5F5;
+    border-radius: 20px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 1rem 2rem;
+   box-shadow: 0.2rem 0.8rem 1rem rgb(0 0 0 / 15%);
+   transition: background-color 0.2s;
+   margin-bottom: 2rem;
+     .ic
    {
-      display: flex;
-      align-items: center; 
-      padding: 1rem;
-      text-align: center;
+      width: 32px;
+      color: grey;
+
    }
    .number
    {
@@ -68,11 +78,11 @@ button:hover
       color: white;
       width: 2rem;
       height: 2rem;
-      position:absolute;
+      position:relative;
       place-items: center;
       justify-content: center;
-      left: 2px;
-
+      margin-left: -100px;
+      padding: 0rem 0.8rem;
    }
   }
   .block:hover

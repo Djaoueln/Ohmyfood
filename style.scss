@@ -1,6 +1,7 @@
 @import "./sass/base.scss";
 @import "./sass/layout/header.scss";
 @import "./sass/layout/Search.scss";
+@import "./sass/pages/restaurant.scss";
 
 /* Result*/
 .menu
@@ -53,35 +54,57 @@
          color: black;
          display: flex;
          position: relative;
-
-         
-         .icone 
+         justify-content: space-between;
+         align-items: center;
+         i
          {
-           font-size: 32px;
-           position: absolute;
-           right: 16px;
-           bottom: 18%;
-           transform: translateY(-50%);
+            font-size: 2rem;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+         }
+         .fa-solid  
+            {
+               color: transparent;
+               background-image: linear-gradient(0deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+               background-clip: text;
+               -webkit-background-clip: text;
+               opacity: 0;
+               transition: all 0.3s linear 0.2s;
+            }
+         &:hover .fa-solid
+             {
+                opacity: 1;
+             }
          
-           .fa-regular
-           {
-              width: 100%;
-              bottom: 40%;
+      }
+   }
 
-           }
-           .fa-solid
-           {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(0deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
-             transition: all 200ms ;
-             
-         }
-           &:hover .fa-solid{
-           opacity: 0;
-           }
-         }
+
+/* footer */
+footer
+   {
+      background-color: #353535;
+      padding: 1rem 2rem;
+
+   
+   .logo-footer img
+       {
+         height: 1.2rem;
+         filter: invert(100%);
+         -webkit-filter: invert(100%);
+
+       }
+      p
+      {
+       color: white;
+       font-size: smaller;
+       i
+       {
+          font-size: 0.5rem;
+          padding: 0.3rem;
+       }
       }
    }
 
