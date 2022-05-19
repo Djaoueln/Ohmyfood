@@ -17,6 +17,11 @@ body {
   }
 }
 
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
 /* HEADER */
 header {
   background-color: white;
@@ -112,7 +117,7 @@ button:hover {
   opacity: 0.8;
 }
 
-main {
+.resto-card {
   position: relative;
   margin-top: -99px;
   border-radius: 16px 16px 0 0;
@@ -139,7 +144,7 @@ main {
   font-size: 2rem;
   position: absolute;
   right: 1rem;
-  top: 80%;
+  top: 15%;
   transform: translateY(-50%);
 }
 .menu1 .icone .fa-solid {
@@ -154,9 +159,60 @@ main {
   opacity: 1;
 }
 
-/*corp */
+/* corp */
 .cardmenu {
-  background-color: yellow;
+  padding: 0 16px;
+}
+.cardmenu .flat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 1000px) {
+  .cardmenu .flat {
+    grid-template-columns: 1fr;
+  }
+}
+.cardmenu .flat .menu-group {
+  background-color: white;
+  border-radius: 16px;
+}
+.cardmenu .flat .menu-group .item {
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 2px 1px 8px -3px grey;
+}
+.cardmenu .flat .menu-group .item .menu-description {
+  padding: 16px;
+}
+.cardmenu .flat .menu-group .item .price {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  font-weight: 900;
+  padding: 16px;
+}
+.cardmenu .flat .menu-group .item .anim-ok {
+  border-radius: 0 16px 16px 0;
+  background-color: #99e2d0;
+  margin-right: -64px;
+  width: 64px;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s;
+}
+.cardmenu .flat .menu-group .item .anim-ok i {
+  background-color: #99e2d0;
+  color: white;
+  font-size: 36px;
+  transition-duration: 0.8s;
+}
+.cardmenu .flat .menu-group .item:hover .anim-ok {
+  margin-right: 0;
+}
+.cardmenu .flat .menu-group .item:hover .anim-ok i {
+  transform: rotate(360deg);
 }
 
 /* Result*/

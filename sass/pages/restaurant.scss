@@ -1,9 +1,10 @@
-main
+.resto-card
   {
      position:relative ;
      margin-top: -99px;
      border-radius: 16px 16px 0 0;
      background-color: #f6f6f6;
+
   }
 .pic img
 { display: block;
@@ -29,7 +30,7 @@ h2
             font-size: 2rem;
             position: absolute;
             right: 1rem;
-            top: 80%;
+            top: 15%;
             transform: translateY(-50%);
          }
          .fa-solid  
@@ -48,8 +49,73 @@ h2
             }
 }
 
-/*corp */
-.cardmenu
-  {
-     background-color: yellow;
-  }
+/* corp */
+.cardmenu 
+{
+   padding: 0 16px;
+         .flat
+          {
+             display: grid;
+             grid-template-columns: repeat(3, 1fr);
+             gap: 16px;
+             @media (max-width: 1000px) 
+             {
+                grid-template-columns: 1fr;
+             }
+             .menu-group
+              {
+               background-color: white;
+               border-radius: 16px;
+               
+               .item
+               {  
+                  border-radius: 16px;
+                  display: flex;
+                  overflow: hidden;
+                  box-shadow: 2px 1px 8px -3px grey;
+                  .menu-description
+                    {
+                       padding: 16px;
+                    }
+                  .price
+                    {
+                       display:flex ;
+                       align-items: flex-end;
+                      margin-left: auto;
+                      font-weight: 900;
+                      padding: 16px;
+                    }
+                  .anim-ok
+                    {  
+                       border-radius: 0 16px 16px 0;
+                       background-color: #99e2d0;
+                       margin-right: -64px;
+                       width: 64px;
+                       display: grid;
+                       place-items: center;
+                       
+                       transition: all 0.5s;
+                        i
+                          {
+                             background-color: #99e2d0;
+                             color: white;
+                             font-size: 36px;
+                             transition-duration: 0.8s;
+                             
+
+                          }
+                       
+                    }
+                    &:hover .anim-ok
+                     {
+                       margin-right: 0;
+                       i
+                        {
+                           transform:rotate(360deg);
+                        }
+                     }
+                  
+               }
+              }
+          }
+}
