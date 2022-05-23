@@ -1,3 +1,22 @@
+.header
+  { 
+     display: flex;
+     justify-content: center;
+     padding: 8px;
+    h1
+    {
+      font-family: "Shrikhand", "sans-serif";
+   
+    }
+       i 
+       {
+         position: absolute;
+         top: 18px;
+         right: 350px;
+         font-size: x-large;
+       }
+    }
+   
 .resto-card
   {
      position:relative ;
@@ -16,6 +35,7 @@
 .menu1
     {
       border-radius: 16px 16px 0 0;
+      }
   
  .name h2
  { 
@@ -48,16 +68,11 @@
                 opacity: 1;
              }
             }
-}
 
 /* corp */
 .cardmenu 
 {
    padding: 0 16px;
-    .grad 
-        {
-
-        }
          .flat
           {
              display: grid;
@@ -91,6 +106,7 @@
                background-color: white;
                border-radius: 16px;
                margin-left: 16px;
+               overflow: hidden;
                
                .item
                {  
@@ -102,6 +118,17 @@
                     {
                        padding: 16px;
                        overflow: hidden;
+                       
+                       p
+                        {
+                           overflow: hidden;
+                           white-space: nowrap;
+                        }
+                        h4 
+                        {
+                           overflow: hidden;
+                           white-space: nowrap;
+                        }
                     }
                   .price
                     {
@@ -110,6 +137,8 @@
                       margin-left: auto;
                       font-weight: 900;
                       padding: 16px;
+                      overflow: hidden;
+                      white-space: nowrap;
                     }
                   .anim-ok
                     {  
@@ -130,16 +159,45 @@
                              transition-duration: 0.8s;
                           }  
                     }
-                    &:hover .anim-ok
+                    &:hover {
+                    cursor: pointer;   
+                    .anim-ok
                      {
                        margin-right: 0;
+                       
                        i
                         {
                            transform:rotate(360deg);
                         }
                      }
-                  
+                    }
                }
               }
           }
 }
+section.commander {
+   height: 20vh;
+   display: grid;
+   place-items: center;
+
+button
+        {
+         background: rgb(147,86,220);;
+         background-image: linear-gradient(0deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+         padding: 16px;
+         border-radius: 1.5rem;
+         border: none;
+         color: white;
+         font-size: 16px;
+         transition: all, 200ms ;
+         margin-bottom: 2rem;
+         margin-top: 16px;
+         box-shadow: 0px 1px 1px 1px GREY;
+         cursor: pointer;
+        }
+        &:hover
+         {
+            transform: scale(1.02);
+            opacity: 0.9;
+         }
+      }
