@@ -2,7 +2,7 @@
   {
      position:relative ;
      margin-top: -99px;
-     border-radius: 16px 16px 0 0;
+     border-radius: 34px 34px 0 0;
      background-color: #f6f6f6;
 
   }
@@ -17,20 +17,21 @@
     {
       border-radius: 16px 16px 0 0;
   
-h2
+ .name h2
  { 
     font-family: "Shrikhand", "sans-serif";
     width: 100%;
-    padding: 16px 16px 0 0;
-    
+    padding: 16px 16px 0 0; 
+    margin-left: 30px; 
+    margin-bottom: 20px;
  }
  .icone {
       i
          {
-            font-size: 2rem;
+            font-size: 36px;
             position: absolute;
-            right: 1rem;
-            top: 15%;
+            right: 36px;
+            top: 3%;
             transform: translateY(-50%);
          }
          .fa-solid  
@@ -53,19 +54,43 @@ h2
 .cardmenu 
 {
    padding: 0 16px;
+    .grad 
+        {
+
+        }
          .flat
           {
              display: grid;
              grid-template-columns: repeat(3, 1fr);
              gap: 16px;
+
              @media (max-width: 1000px) 
              {
                 grid-template-columns: 1fr;
              }
+             h3 
+             {
+                text-transform: uppercase;
+                font-weight: 400;
+                position: relative;
+                &::after
+                  {
+                     content: "";
+                     height: 3px;
+                     width: 45px;
+                     top: 24px;
+                     left: 0;
+
+                     background-color: #99e2d0;
+                     position: absolute;
+                  }
+             }
+             
              .menu-group
               {
                background-color: white;
                border-radius: 16px;
+               margin-left: 16px;
                
                .item
                {  
@@ -76,6 +101,7 @@ h2
                   .menu-description
                     {
                        padding: 16px;
+                       overflow: hidden;
                     }
                   .price
                     {
@@ -93,6 +119,7 @@ h2
                        width: 64px;
                        display: grid;
                        place-items: center;
+                       flex-shrink: 0;
                        
                        transition: all 0.5s;
                         i
@@ -101,10 +128,7 @@ h2
                              color: white;
                              font-size: 36px;
                              transition-duration: 0.8s;
-                             
-
-                          }
-                       
+                          }  
                     }
                     &:hover .anim-ok
                      {
