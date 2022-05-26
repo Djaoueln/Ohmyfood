@@ -44,9 +44,13 @@ button:hover
 .working
    {
       padding: 0rem 1rem 1rem 1rem;
-
+ 
        display: flex;
        flex-direction: column;
+       h2 
+       {
+          padding: 16px;
+       }
       .block-card
         {
          align-self: center;
@@ -55,6 +59,7 @@ button:hover
 
 .block
   {
+     
    background-color: #F5F5F5;
     border-radius: 20px;
    display: flex;
@@ -64,6 +69,7 @@ button:hover
    box-shadow: 0.2rem 0.8rem 1rem rgb(0 0 0 / 15%);
    transition: background-color 0.2s;
    margin-bottom: 2rem;
+    
      .ic
    {
       width: 32px;
@@ -88,7 +94,18 @@ button:hover
   }
   .block:hover
   {
-     transform: scale(1.5);
+     transform: scale(1.05);
      opacity: 0.8;
   }
+  @media (min-width:700px)
+  {
+    .block-card
+     {
+       display: flex ;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 36px;
+     }
+  }
+   
  

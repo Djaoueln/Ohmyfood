@@ -1,8 +1,19 @@
+@use "../utils/animation.scss";
+* {
+   margin:0;
+   padding:0;
+   }
+
 .header
   { 
-     display: flex;
-     justify-content: center;
-     padding: 8px;
+   display: flex;
+   justify-content: space-between;
+   padding: 8px;
+   align-items: center;
+     .back
+       {
+          background-color: transparent;
+       }
     h1
     {
       font-family: "Shrikhand", "sans-serif";
@@ -10,16 +21,18 @@
     }
        i 
        {
-         position: absolute;
-         top: 18px;
-         right: 350px;
          font-size: x-large;
+       
+       &:hover
+       {
+         transform: scale(1.05);
        }
+      }
     }
    
 .resto-card
   {
-     position:relative ;
+     position:relative;
      margin-top: -99px;
      border-radius: 34px 34px 0 0;
      background-color: #f6f6f6;
@@ -40,7 +53,6 @@
  .name h2
  { 
     font-family: "Shrikhand", "sans-serif";
-    width: 100%;
     padding: 16px 16px 0 0; 
     margin-left: 30px; 
     margin-bottom: 20px;
@@ -51,7 +63,7 @@
             font-size: 36px;
             position: absolute;
             right: 36px;
-            top: 3%;
+            top: 36px;
             transform: translateY(-50%);
          }
          .fa-solid  
@@ -73,16 +85,20 @@
 .cardmenu 
 {
    padding: 0 16px;
+   
          .flat
           {
-             display: grid;
-             grid-template-columns: repeat(3, 1fr);
-             gap: 16px;
-
-             @media (max-width: 1000px) 
-             {
-                grid-template-columns: 1fr;
-             }
+             
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            
+            @media (max-width: 1000px) 
+            {
+               grid-template-columns: 1fr;
+            }
+        
+            
              h3 
              {
                 text-transform: uppercase;
@@ -99,21 +115,41 @@
                      background-color: #99e2d0;
                      position: absolute;
                   }
+             
              }
              
              .menu-group
               {
+                 
                background-color: white;
                border-radius: 16px;
                margin-left: 16px;
                overflow: hidden;
+               box-shadow: 2px 1px 8px -3px #000000;
+               animation-fill-mode: both;
+               animation: appear ease-in 1s ;
+               @for $i from 1 through 13
+               {
+                  &:nth-child(#{$i})
+                   {
+                      animation-delay: 50ms * $i;
+                   }
+               }
                
+               
+               
+              
                .item
                {  
                   border-radius: 16px;
                   display: flex;
                   overflow: hidden;
-                  box-shadow: 2px 1px 8px -3px grey;
+                  
+            
+               
+                  
+                  
+                
                   .menu-description
                     {
                        padding: 16px;
@@ -121,8 +157,12 @@
                        
                        p
                         {
+                           width: 100%;
                            overflow: hidden;
-                           white-space: nowrap;
+                          display: inline-block;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+
                         }
                         h4 
                         {

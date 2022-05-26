@@ -34,6 +34,67 @@ header .logo img {
   height: 2rem;
 }
 
+.loader {
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disapear 0.2s 3s forwards;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  opacity: 1;
+  width: 100px;
+  height: 100px;
+}
+
+.inner.one {
+  border-left: 8px solid #99E2D0;
+  border-right: 8px solid #99E2D0;
+  animation: rotate-left 1s infinite;
+}
+
+.inner.two {
+  border-top: 8px solid #FF79DA;
+  border-bottom: 8px solid #FF79DA;
+  animation: rotate-left 2s infinite;
+}
+
+.inner.three {
+  border-top: 8px solid #9356DC;
+  border-bottom: 8px solid #9356DC;
+  animation: rotate-left 3s infinite;
+}
+
+@keyframes rotate-left {
+  100% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disapear {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .search-city {
   background-color: lightgray;
   padding: 0.3rem;
@@ -79,6 +140,9 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+.working h2 {
+  padding: 16px;
+}
 .working .block-card {
   align-self: center;
 }
@@ -114,23 +178,48 @@ button:hover {
 }
 
 .block:hover {
-  transform: scale(1.5);
+  transform: scale(1.05);
   opacity: 0.8;
+}
+
+@media (min-width: 700px) {
+  .block-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 36px;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 8px;
+  align-items: center;
+}
+.header .back {
+  background-color: transparent;
 }
 .header h1 {
   font-family: "Shrikhand", "sans-serif";
 }
 .header i {
-  position: absolute;
-  top: 18px;
-  right: 350px;
   font-size: x-large;
+}
+.header i:hover {
+  transform: scale(1.05);
 }
 
 .resto-card {
@@ -154,7 +243,6 @@ button:hover {
 
 .name h2 {
   font-family: "Shrikhand", "sans-serif";
-  width: 100%;
   padding: 16px 16px 0 0;
   margin-left: 30px;
   margin-bottom: 20px;
@@ -164,7 +252,7 @@ button:hover {
   font-size: 36px;
   position: absolute;
   right: 36px;
-  top: 3%;
+  top: 36px;
   transform: translateY(-50%);
 }
 .icone .fa-solid {
@@ -185,7 +273,7 @@ button:hover {
 }
 .cardmenu .flat {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 @media (max-width: 1000px) {
@@ -212,19 +300,63 @@ button:hover {
   border-radius: 16px;
   margin-left: 16px;
   overflow: hidden;
+  box-shadow: 2px 1px 8px -3px #000000;
+  animation-fill-mode: both;
+  animation: appear ease-in 1s;
+}
+.cardmenu .flat .menu-group:nth-child(1) {
+  animation-delay: 50ms;
+}
+.cardmenu .flat .menu-group:nth-child(2) {
+  animation-delay: 100ms;
+}
+.cardmenu .flat .menu-group:nth-child(3) {
+  animation-delay: 150ms;
+}
+.cardmenu .flat .menu-group:nth-child(4) {
+  animation-delay: 200ms;
+}
+.cardmenu .flat .menu-group:nth-child(5) {
+  animation-delay: 250ms;
+}
+.cardmenu .flat .menu-group:nth-child(6) {
+  animation-delay: 300ms;
+}
+.cardmenu .flat .menu-group:nth-child(7) {
+  animation-delay: 350ms;
+}
+.cardmenu .flat .menu-group:nth-child(8) {
+  animation-delay: 400ms;
+}
+.cardmenu .flat .menu-group:nth-child(9) {
+  animation-delay: 450ms;
+}
+.cardmenu .flat .menu-group:nth-child(10) {
+  animation-delay: 500ms;
+}
+.cardmenu .flat .menu-group:nth-child(11) {
+  animation-delay: 550ms;
+}
+.cardmenu .flat .menu-group:nth-child(12) {
+  animation-delay: 600ms;
+}
+.cardmenu .flat .menu-group:nth-child(13) {
+  animation-delay: 650ms;
 }
 .cardmenu .flat .menu-group .item {
   border-radius: 16px;
   display: flex;
   overflow: hidden;
-  box-shadow: 2px 1px 8px -3px grey;
 }
 .cardmenu .flat .menu-group .item .menu-description {
   padding: 16px;
   overflow: hidden;
 }
 .cardmenu .flat .menu-group .item .menu-description p {
+  width: 100%;
   overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .cardmenu .flat .menu-group .item .menu-description h4 {
@@ -295,14 +427,20 @@ section.commander:hover {
   background-color: #f6f6f6;
   padding: 32px 16px;
 }
+.menu h3 {
+  padding: 7px;
+}
+.menu p {
+  padding: 7px;
+}
 
 .restaurant-card {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: space-around;
   margin-bottom: 16px;
   flex-direction: column;
+  padding: 16px;
 }
 
 .card-menu {
