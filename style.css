@@ -422,16 +422,9 @@ section.commander:hover {
   opacity: 0.9;
 }
 
-/* Result*/
 .menu {
   background-color: #f6f6f6;
   padding: 32px 16px;
-}
-.menu h3 {
-  padding: 7px;
-}
-.menu p {
-  padding: 7px;
 }
 
 .restaurant-card {
@@ -474,6 +467,10 @@ section.commander:hover {
   position: relative;
   justify-content: space-between;
   align-items: center;
+}
+.card-menu .description .texte {
+  margin: 7px;
+  margin-bottom: 12px;
 }
 .card-menu .description i {
   font-size: 2rem;
