@@ -436,7 +436,6 @@ section.commander:hover {
 
 .restaurant-card {
   display: flex;
-  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 16px;
   flex-direction: column;
@@ -495,6 +494,11 @@ section.commander:hover {
   opacity: 1;
 }
 
+@media (min-width: 700px) {
+  .restaurant-card {
+    flex-direction: row;
+  }
+}
 /* footer */
 footer {
   background-color: #353535;
