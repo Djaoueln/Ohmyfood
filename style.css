@@ -218,6 +218,8 @@ button:hover {
 }
 .header i {
   font-size: x-large;
+  text-decoration: none;
+  color: #000000;
 }
 .header i:hover {
   transform: scale(1.05);
@@ -255,6 +257,9 @@ button:hover {
   right: 36px;
   top: 36px;
   transform: translateY(-50%);
+}
+.icone .fa-regular {
+  color: grey;
 }
 .icone .fa-solid {
   color: transparent;
@@ -504,6 +509,10 @@ section.commander:hover {
 footer {
   background-color: #353535;
   padding: 1rem 2rem;
+}
+footer a {
+  color: white;
+  text-decoration: none;
 }
 footer .logo-footer img {
   height: 1.2rem;
