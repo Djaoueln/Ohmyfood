@@ -71,6 +71,10 @@
                opacity: 0;
                transition: all 0.3s linear 0.2s;
             }
+            .fa-regular
+             {
+                color: grey;
+             }
          &:hover .fa-solid
              {
                 opacity: 1;
